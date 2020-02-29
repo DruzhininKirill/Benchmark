@@ -15,9 +15,10 @@ def render_init(scene):
     RENDER_START_TIME = datetime.now()  
     print("Render Start")  
 
-def complete(scene, config):
+def complete(scene):
+    global d
     f = open("Metadata.txt", "w")
-    f.write("Config: " + config +"\nRenderTime:" + str(datetime.now() - RENDER_START_TIME))
+    f.write("Config: " + d +"\nRenderTime:" + str(datetime.now() - RENDER_START_TIME))
 
 def object_setter(size, type, amount):
     n=0
@@ -134,6 +135,6 @@ light_maker(CountOfLights, TypeOfLight, Size, CountOfObjects)
 
 
 handlers.render_init.append(render_init)
-handlers.render_complete.append(complete, d)
+handlers.render_complete.append(complete)
 bpy.context.scene.render.filepath = "//Benchmark.png"
 bpy.ops.render.render(write_still = True)

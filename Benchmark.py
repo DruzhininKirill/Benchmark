@@ -19,7 +19,7 @@ def object_setter(size, type, amount):
         for j in range(side):
             if (n<amount):
                 n+=1
-                eval(str)(size=size, enter_editmode=False, location=(j*margin, i*margin, 0))
+                eval(str)(size, enter_editmode=False, location=(j*margin, i*margin, 0))
             else: break;
 
 def camera_setter(size, amount):

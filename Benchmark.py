@@ -76,9 +76,9 @@ def set_env(samples, threshold, IBL):
     objs = [ob for ob in bpy.context.scene.objects if ob.type in ('LIGHT', 'MESH')]
     bpy.ops.object.delete({"selected_objects": objs})
 
-    for material in bpy.data.materials:
-    	material.user_clear()
-    	bpy.data.materials.remove(material)
+#     for material in bpy.data.materials:
+#     	material.user_clear()
+#     	bpy.data.materials.remove(material)
 	
     bpy.context.scene.render.engine = 'RPR'
     bpy.context.scene.world.rpr.enabled = IBL #boolean

@@ -16,9 +16,9 @@ def render_init(scene):
     print("Render Start")  
 
 def complete(scene):
-    global d
+    global s
     f = open("Metadata.txt", "w")
-    f.write("Config: " + d +"\nRenderTime:" + str(datetime.now() - RENDER_START_TIME))
+    f.write("Config: " + s +"\nRenderTime:" + str(datetime.now() - RENDER_START_TIME))
 
 def object_setter(size, type, amount):
     n=0

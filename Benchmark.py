@@ -10,7 +10,7 @@ import random
 
 
 
-def object_setter(size, type, amount):
+def object_setter(sizer, type, amount):
     n=0
     margin=size*2
     side = math.ceil(math.sqrt(amount))
@@ -19,7 +19,7 @@ def object_setter(size, type, amount):
         for j in range(side):
             if (n<amount):
                 n+=1
-                eval(str)(size, enter_editmode=False, location=(j*margin, i*margin, 0))
+                eval(str)(sizer, enter_editmode=False, location=(j*margin, i*margin, 0))
             else: break;
 
 def camera_setter(size, amount):
@@ -76,9 +76,9 @@ def set_env(samples, threshold, IBL):
     objs = [ob for ob in bpy.context.scene.objects if ob.type in ('LIGHT', 'MESH')]
     bpy.ops.object.delete({"selected_objects": objs})
 
-#     for material in bpy.data.materials:
-#     	material.user_clear()
-#     	bpy.data.materials.remove(material)
+    for material in bpy.data.materials:
+    	material.user_clear()
+    	bpy.data.materials.remove(material)
 	
     bpy.context.scene.render.engine = 'RPR'
     bpy.context.scene.world.rpr.enabled = IBL #boolean

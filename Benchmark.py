@@ -12,7 +12,7 @@ import random
 
 def object_setter(sizer, type, amount):
     n=0
-    margin=size*2
+    margin=sizer*2
     side = math.ceil(math.sqrt(amount))
     str = ("bpy.ops.mesh.primitive_"+type+"_add")
     for i in range(side):

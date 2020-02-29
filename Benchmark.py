@@ -14,7 +14,7 @@ def object_setter(size, type, amount):
     n=0
     margin=size*2
     side = math.ceil(math.sqrt(amount))
-    if type == "cube" || 'monkey':
+    if type == "cube" or 'monkey':
 	    for i in range(side):
 			for j in range(side):
 				if (n<amount):

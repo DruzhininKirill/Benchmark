@@ -28,7 +28,7 @@ def object_setter(size, type, amount):
             for j in range(side):
                 if (n<amount):
                     n+=1
-                    eval(str)(radius=size, enter_editmode=False, location=(j*margin, i*margin, 0))
+                    eval(str)(radius=size/2, enter_editmode=False, location=(j*margin, i*margin, 0))
                 else: break;
 
 def camera_setter(size, amount):
@@ -107,7 +107,7 @@ TypeOfObject = d['TypeOfObject']
 CountOfObjects = int(d['CountOfObjects'])
 CountOfLights = int(d['CountOfLights'])
 CountOfMaterials = int(d['CountOfMaterials'])
-Size = int(d['ObjectSize'])
+Size = float(d['ObjectSize'])
 
 if d['UseIBL'] == 'false':
     UseIBL = False

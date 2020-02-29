@@ -17,7 +17,7 @@ def object_setter(size, type, amount):
     side = math.ceil(math.sqrt(amount))
     str = ("bpy.ops.mesh.primitive_"+type+"_add")
     if type == 'monkey' or 'cube':
-	print("KIKI")
+	    print("KIKI")
         for i in range(side):
             for j in range(side):
                 if (n<amount):
@@ -25,7 +25,7 @@ def object_setter(size, type, amount):
                     eval(str)(size=size, enter_editmode=False, location=(j*margin, i*margin, 0))
                 else: break;
     else:
-	print("What")
+	    print("What")
         for i in range(side):
             for j in range(side):
                 if (n<amount):

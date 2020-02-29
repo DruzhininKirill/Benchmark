@@ -14,13 +14,22 @@ def object_setter(size, type, amount):
     n=0
     margin=size*2
     side = math.ceil(math.sqrt(amount))
-    str = ("bpy.ops.mesh.primitive_"+type+"_add")
-    for i in range(side):
-        for j in range(side):
-            if (n<amount):
-                n+=1
-                eval(str)(size, enter_editmode=False, location=(j*margin, i*margin, 0))
-            else: break;
+    if type == "cube" || 'monkey':
+	    for i in range(side):
+			for j in range(side):
+				if (n<amount):
+					n+=1
+					eval(str)(size=size, enter_editmode=False, location=(j*margin, i*margin, 0))
+				else: break;
+	else:
+		for i in range(side):
+			for j in range(side):
+				if (n<amount):
+					n+=1
+					eval(str)(radius=size, enter_editmode=False, location=(j*margin, i*margin, 0))
+				else: break;
+    
+
 
 def camera_setter(size, amount):
     koef = 1.5 #camera length and width

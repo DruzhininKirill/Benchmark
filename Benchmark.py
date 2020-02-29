@@ -11,6 +11,7 @@ import random
 
 
 def object_setter(size, type, amount):
+    print(type)
     n=0
     margin=size*2
     side = math.ceil(math.sqrt(amount))
